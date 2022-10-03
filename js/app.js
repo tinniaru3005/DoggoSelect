@@ -7,7 +7,9 @@ const form = document.querySelector('form');
 // ------------------------------------------
 function fetchData(url) {
     return fetch(url)
+        .then(checkStatus)
         .then(response => response.json())
+        .catch(error => console.log('Looks like there was an error: ', error));
 }
 
 fetchData('https://dog.ceo/api/breeds/list')
@@ -20,6 +22,14 @@ fetchData('https://dog.ceo/api/breeds/image/random')
 // ------------------------------------------
 //  HELPER FUNCTIONS
 // ------------------------------------------
+function checkStatus(response) {
+    if(response.ok) {
+        return Promise.resolve(response);
+    } else {
+        return Promise.reject(new Error(response.statusText));
+    }
+}
+
 function generateOptions(data) {
     const options = data.map(item => `
         <option value = '${item}'>${item}</option>
