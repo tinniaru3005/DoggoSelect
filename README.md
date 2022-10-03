@@ -1,4 +1,4 @@
-# 🐕 Fetch-API
+# 🐕 DoggoSelect
 - Initially, a random dog image of a random breed is loaded
 - On selecting a particular breed from the select menu, a random image of a dog of that breed is displayed inside the card div
 - When you click on the card div, another random image is loaded of the selected breed
