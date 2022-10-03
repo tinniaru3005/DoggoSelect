@@ -74,4 +74,18 @@ card.addEventListener('click', fetchBreedImage);
 // ------------------------------------------
 //  POST DATA
 // ------------------------------------------
-
+function postData(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+    fetch('https://jsonplaceholder.typicode.com/comments', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, comment })
+    })
+        .then(checkStatus)
+        .then(response => response.json())
+        .then(data => console.log(data))
+}
