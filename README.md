@@ -10,3 +10,7 @@
 
 ## 📹 Video
 https://user-images.githubusercontent.com/62856848/193544536-58948540-0fde-44e1-b011-84bb0980b91e.mp4
+
+## 👁 Test Cases Using Postman
+![2](https://user-images.githubusercontent.com/62856848/216683484-cba834d4-a35a-4865-9c1c-acd09b83de4b.png)
+
